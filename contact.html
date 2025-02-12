@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+        }
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .header {
+            width: 100%;
+            background-color: rgb(25, 25, 112);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 20px;
+        }
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+        }
+        .nav-buttons button {
+            background-color: white;
+            color: midnightblue;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        @media (max-width: 600px) {
+            .nav-buttons {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 10px;
+                background: rgba(25, 25, 112, 0.7);
+                padding: 10px;
+                border-radius: 5px;
+            }
+            .nav-buttons.show {
+                display: flex;
+            }
+            .menu-icon {
+                display: block;
+            }
+        }
+        .container {
+            margin-top: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: calc(100vh - 80px);
+            padding: 20px;
+        }
+        .card {
+            width: 100%;
+            max-width: 400px;
+            background: rgb(255, 255, 255);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.185);
+            margin-bottom: 20px;
+            line-height: 30px;
+        }
+        .card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 1px;
+        }
+        .social-buttons a {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: #ddd;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            margin: 5px;
+        }
+        .social-buttons img {
+            width: 16px;
+            height: 16px;
+            margin: auto;
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-buttons').classList.toggle('show');
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to DevOps Training</h1>
+        <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+        <div class="nav-buttons">
+            <button onclick="location.href='index.html'">Home</button>
+            <button onclick="location.href='learn.html'">Learn</button>
+            <button onclick="location.href='contact.html'">Contact Us</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <img src="sajay_geddada.jpg" alt="Sajay Geddada">
+            <h2>Sajay Geddada</h2>
+            <p>Web Designer || Devops Engineer</p>
+            <div class="social-buttons">
+                <a href="https://www.linkedin.com/in/sajay-geddada-8a64b9194/" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn">LinkedIn</a>
+                <a href="https://github.com/sajaygeddada" target="_blank"><img src="github-icon.png" alt="GitHub" >GitHub</a>
+                <a href="https://www.instagram.com/sajaygeddada/?hl=en" target="_blank"><img src="instagram-icon.png" alt="Instagram">Instagram</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="saikumar.jpg" alt="Sai Kumar">
+            <h2>Sai Kumar</h2>
+            <p>Devops Engineer</p>
+            <div class="social-buttons">
+                <a href="https://www.linkedin.com/in/sai-kumar-vabbalreddi-501640191/" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn">LinkedIn</a>
+                <a href="https://github.com/iamsaikumar6039" target="_blank"><img src="github-icon.png" alt="GitHub">GitHub</a>
+                <a href="https://www.instagram.com/saikumar_.shiva/?hl=en" target="_blank"><img src="instagram-icon.png" alt="Instagram">Instagram</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
