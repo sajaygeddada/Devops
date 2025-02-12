@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to DevOps</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+            position: relative;
+        }
+        h1, h2 {
+            color: #007bff;
+        }
+        ul {
+            margin-bottom: 20px;
+        }
+        .top-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: none;
+            z-index: 1000;
+            font-weight: bold;
+            font-size: x-large;
+        }
+    </style>
+    <script>
+        window.onscroll = function() {
+            var button = document.getElementById("topButton");
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+        
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</head>
+<body>
+    <h1>What is DevOps?</h1>
+    <p>DevOps is a set of practices, tools, and cultural philosophies that aim to improve collaboration between <strong>development (Dev)</strong> and <strong>operations (Ops)</strong> teams. It focuses on automating and integrating processes to deliver software faster and more reliably.</p>
+
+    <h2>Why DevOps?</h2>
+    <p>DevOps is essential because it helps organizations develop and deliver high-quality software faster and more efficiently. It enables teams to collaborate better, automate processes, and ensure continuous integration and deployment. This leads to reduced time-to-market, improved product stability, and enhanced customer satisfaction.</p>
+
+    <h2>Key Principles of DevOps</h2>
+    <ul>
+        <li><strong>Collaboration</strong> – Breaking the silos between Dev and Ops teams.</li>
+        <li><strong>Automation</strong> – Automating repetitive tasks like testing, deployment, and monitoring.</li>
+        <li><strong>Continuous Integration (CI)</strong> – Developers frequently merge code changes into a shared repository.</li>
+        <li><strong>Continuous Delivery (CD)</strong> – Automated release process to deploy software reliably.</li>
+        <li><strong>Monitoring & Feedback</strong> – Using tools to track performance and detect issues early.</li>
+    </ul>
+
+    <h2>DevOps Lifecycle</h2>
+    <ol>
+        <li><strong>Plan</strong> – Define requirements and roadmap.</li>
+        <li><strong>Develop</strong> – Write and manage code efficiently.</li>
+        <li><strong>Build</strong> – Automate build processes.</li>
+        <li><strong>Test</strong> – Ensure quality through automated testing.</li>
+        <li><strong>Release</strong> – Deploy software frequently and reliably.</li>
+        <li><strong>Monitor</strong> – Track performance and troubleshoot issues.</li>
+        <li><strong>Operate</strong> – Maintain and improve system performance.</li>
+    </ol>
+
+    <h2>Popular DevOps Tools</h2>
+    <ul>
+        <li><strong>CI/CD:</strong> Jenkins, GitHub Actions, GitLab CI/CD</li>
+        <li><strong>Configuration Management:</strong> Ansible, Puppet, Chef</li>
+        <li><strong>Containerization:</strong> Docker, Kubernetes</li>
+        <li><strong>Monitoring & Logging:</strong> Prometheus, Grafana, ELK Stack</li>
+        <li><strong>Version Control:</strong> Git, GitHub, GitLab</li>
+    </ul>
+
+    <h2>Why is DevOps Important?</h2>
+    <ul>
+        <li>✅ Faster software delivery</li>
+        <li>✅ Improved software quality</li>
+        <li>✅ Increased efficiency and collaboration</li>
+        <li>✅ Enhanced security and stability</li>
+    </ul>
+
+    <h2>Day-to-Day Activities of a DevOps Engineer</h2>
+    <ul>
+        <li><strong>Infrastructure Management:</strong> Provisioning and maintaining cloud or on-prem infrastructure.</li>
+        <li><strong>CI/CD Pipeline Maintenance:</strong> Managing automated build, test, and deployment pipelines.</li>
+        <li><strong>Monitoring and Logging:</strong> Using tools to monitor system performance and application logs.</li>
+        <li><strong>Incident Management:</strong> Troubleshooting and resolving production issues quickly.</li>
+        <li><strong>Security and Compliance:</strong> Ensuring security best practices and compliance adherence.</li>
+        <li><strong>Automation:</strong> Writing scripts and automating repetitive tasks.</li>
+        <li><strong>Collaboration:</strong> Working with developers and IT teams to streamline processes.</li>
+        <li><strong>Documentation:</strong> Keeping records of configurations, workflows, and troubleshooting guides.</li>
+    </ul>
+
+    <h2>Common DevOps Tools Used Daily</h2>
+    <ul>
+        <li><strong>Cloud Platforms:</strong> AWS, Azure, Google Cloud</li>
+        <li><strong>CI/CD Tools:</strong> Jenkins, GitHub Actions, GitLab CI/CD</li>
+        <li><strong>Configuration Management:</strong> Ansible, Terraform, Puppet</li>
+        <li><strong>Monitoring & Logging:</strong> Prometheus, Grafana, ELK Stack, Datadog</li>
+        <li><strong>Containerization & Orchestration:</strong> Docker, Kubernetes</li>
+        <li><strong>Version Control & Collaboration:</strong> Git, GitHub, GitLab, Bitbucket</li>
+        <li><strong>Scripting & Automation:</strong> Bash, Python, PowerShell</li>
+        <li><strong>Security & Compliance:</strong> HashiCorp Vault, SonarQube, Snyk</li>
+    </ul>
+    
+    <button id="topButton" class="top-button" onclick="scrollToTop()">&#8965;</button>
+</body>
+</html>

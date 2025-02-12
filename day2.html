@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to DevOps</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+            position: relative;
+        }
+        h1, h2 {
+            color: #007bff;
+        }
+        ul {
+            margin-bottom: 20px;
+        }
+        .top-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: none;
+            z-index: 1000;
+            font-weight: bold;
+            font-size: x-large;
+        }
+    </style>
+    <script>
+        window.onscroll = function() {
+            var button = document.getElementById("topButton");
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+        
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</head>
+<body>
+    <h1>What is DevOps?</h1>
+    <p>DevOps is a set of practices, tools, and cultural philosophies that aim to improve collaboration between <strong>development (Dev)</strong> and <strong>operations (Ops)</strong> teams. It focuses on automating and integrating processes to deliver software faster and more reliably.</p>
+
+    <h2>Software Development Life Cycle (SDLC) and DevOps</h2>
+    <p>The <strong>Software Development Life Cycle (SDLC)</strong> is a structured process for developing high-quality software. It consists of several phases:</p>
+    <ol>
+        <li><strong>Planning:</strong> Define project scope, requirements, and objectives.</li>
+        <li><strong>Analysis:</strong> Gather and analyze business and technical needs.</li>
+        <li><strong>Design:</strong> Create system architecture, UI/UX designs, and technical specifications.</li>
+        <li><strong>Implementation (Development):</strong> Developers write and integrate code.</li>
+        <li><strong>Testing:</strong> Identify and resolve bugs, ensure functionality and performance.</li>
+        <li><strong>Deployment:</strong> Release software into production.</li>
+        <li><strong>Maintenance & Support:</strong> Provide updates, bug fixes, and enhancements.</li>
+    </ol>
+    
+    <h2>DevOps in SDLC</h2>
+    <p>DevOps integrates into each phase of the SDLC to enhance efficiency, automation, and collaboration.</p>
+    <h3>How DevOps Impacts Each SDLC Phase:</h3>
+    <ul>
+        <li><strong>Planning:</strong> Agile methodologies and collaboration tools like Jira and Confluence facilitate real-time tracking and continuous feedback.</li>
+        <li><strong>Analysis:</strong> Automated documentation and collaboration using tools like Git, Confluence, and version control.</li>
+        <li><strong>Design:</strong> Infrastructure as Code (IaC) tools like Terraform and Ansible ensure standardized and reproducible environments.</li>
+        <li><strong>Development:</strong> CI/CD pipelines streamline code integration and testing, reducing manual errors and increasing speed.</li>
+        <li><strong>Testing:</strong> Automated testing tools like Selenium, JUnit, and TestNG ensure continuous quality checks.</li>
+        <li><strong>Deployment:</strong> Continuous Delivery (CD) automates deployments to ensure smooth and consistent releases.</li>
+        <li><strong>Monitoring & Maintenance:</strong> Tools like Prometheus, Grafana, and ELK Stack provide real-time insights and proactive issue resolution.</li>
+    </ul>
+    
+    <h2>How DevOps Enhances SDLC</h2>
+    <p>Traditional SDLC models can be slow and inefficient due to silos between development and operations teams. DevOps integrates into SDLC to create a more agile, automated, and collaborative workflow.</p>
+    <h3>Key Enhancements by DevOps:</h3>
+    <ul>
+        <li><strong>Continuous Integration (CI):</strong> Automates code integration, reducing conflicts and ensuring consistency.</li>
+        <li><strong>Continuous Delivery (CD):</strong> Enables rapid and reliable deployment of software updates.</li>
+        <li><strong>Infrastructure as Code (IaC):</strong> Automates infrastructure provisioning and management using tools like Terraform and Ansible.</li>
+        <li><strong>Monitoring & Logging:</strong> Uses tools like Prometheus, Grafana, and ELK Stack to track system performance and detect issues early.</li>
+        <li><strong>Security (DevSecOps):</strong> Integrates security practices throughout the development process to prevent vulnerabilities.</li>
+        <li><strong>Automation:</strong> Reduces manual effort in testing, deployment, and monitoring, improving efficiency.</li>
+        <li><strong>Collaboration & Communication:</strong> Breaks down silos between Dev and Ops teams, fostering a culture of shared responsibility.</li>
+    </ul>
+    
+    <h2>Common DevOps Tools Used Daily</h2>
+    <ul>
+        <li><strong>Cloud Platforms:</strong> AWS, Azure, Google Cloud</li>
+        <li><strong>CI/CD Tools:</strong> Jenkins, GitHub Actions, GitLab CI/CD</li>
+        <li><strong>Configuration Management:</strong> Ansible, Terraform, Puppet</li>
+        <li><strong>Monitoring & Logging:</strong> Prometheus, Grafana, ELK Stack, Datadog</li>
+        <li><strong>Containerization & Orchestration:</strong> Docker, Kubernetes</li>
+        <li><strong>Version Control & Collaboration:</strong> Git, GitHub, GitLab, Bitbucket</li>
+        <li><strong>Scripting & Automation:</strong> Bash, Python, PowerShell</li>
+        <li><strong>Security & Compliance:</strong> HashiCorp Vault, SonarQube, Snyk</li>
+    </ul>
+    
+    <button id="topButton" class="top-button" onclick="scrollToTop()">&#8965;</button>
+</body>
+</html>
