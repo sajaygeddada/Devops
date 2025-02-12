@@ -1,9 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Day 3</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Virtualization & Virtual Machines</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+            position: relative;
+        }
+        h1, h2 {
+            color: #007bff;
+        }
+        ul {
+            margin-bottom: 20px;
+        }
+        .top-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: none;
+            z-index: 1000;
+            font-weight: bold;
+            font-size: x-large;
+        }
+    </style>
+    <script>
+        window.onscroll = function() {
+            var button = document.getElementById("topButton");
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+        
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 </head>
 <body>
-    <h1>Welcome to Day 3</h1>
+    <h1>What is Virtualization?</h1>
+    <p>Virtualization is the process of creating a virtual version of a computing resource, such as a server, storage, network, or operating system. It allows multiple virtual instances to run on a single physical machine, improving efficiency and resource utilization.</p>
+
+    <h2>What is a Virtual Machine (VM)?</h2>
+    <p>A Virtual Machine (VM) is a software-based emulation of a physical computer. It runs an operating system and applications just like a physical machine, but it is isolated from the underlying hardware through a hypervisor.</p>
+
+    <h2>Types of Virtual Machines</h2>
+    <ul>
+        <li><strong>System Virtual Machines:</strong> Emulates an entire physical machine and allows multiple OS instances to run independently. Example: VMware, VirtualBox.</li>
+        <li><strong>Process Virtual Machines:</strong> Runs a single application rather than a full OS. Example: Java Virtual Machine (JVM).</li>
+    </ul>
+
+    <h2>Types of Virtual Machines Available</h2>
+    <ul>
+        <li><strong>Full Virtualization:</strong> Complete simulation of hardware, allowing multiple OS installations.</li>
+        <li><strong>Para-Virtualization:</strong> The guest OS is aware of virtualization and interacts with the hypervisor for optimized performance.</li>
+        <li><strong>OS-Level Virtualization:</strong> Multiple isolated user-space instances share the same OS kernel. Example: Docker containers.</li>
+    </ul>
+
+    <h2>Benefits of Virtual Machines</h2>
+    <ul>
+        <li><strong>Cost Efficiency:</strong> Reduces hardware costs by running multiple VMs on a single server.</li>
+        <li><strong>Scalability:</strong> Easily scale up or down based on demand.</li>
+        <li><strong>Security:</strong> Isolated environments prevent security threats from affecting other VMs.</li>
+        <li><strong>Disaster Recovery:</strong> Easy backup and recovery of virtual machines.</li>
+        <li><strong>Cross-Platform Compatibility:</strong> Run different operating systems on the same physical hardware.</li>
+    </ul>
+
+    <h2>Use Cases of Virtual Machines</h2>
+    <ul>
+        <li><strong>Server Consolidation:</strong> Reducing hardware costs by running multiple VMs on a single physical server.</li>
+        <li><strong>Cloud Computing:</strong> Powering cloud services like AWS, Azure, and Google Cloud.</li>
+        <li><strong>Software Testing:</strong> Creating isolated test environments without affecting the host system.</li>
+        <li><strong>Disaster Recovery:</strong> Enabling backup and recovery solutions with VM snapshots.</li>
+        <li><strong>Application Isolation:</strong> Running legacy applications without compatibility issues.</li>
+    </ul>
+    
+    <button id="topButton" class="top-button" onclick="scrollToTop()">&#8965;</button>
 </body>
 </html>
